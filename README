@@ -1,1 +1,13 @@
-11
+项目结构重新构建了，StarTracker 为总项目
+star-common 为公共类层+模型层 
+star-dao 为持久层
+star-service 为业务层
+star-web 为网络请求服务入口
+star-client 为Android客户端
+使用方法 ：
+	1、要求本机已经下载完Maven 并配置好环境（包括环境变量、maven的仓库和eclipse中的maven插件对应本机安装好的maven目录）
+	2、在任意盘符下新建一个空的件夹 进入后 右键选择 git bash here 打开git命令窗口
+	3、提示 git命令窗口 为lunix
+	4、输入 git clone git@github.com:StarTrakerDeveloper/StarTracker.git 提示输入你的github账户密码    
+	5、这样就把项目克隆下来了
+	6、在当前件夹下 双击 toeclipse.bat 和 cleancomplie.bat (这样用来把项目构建为maven项目)
