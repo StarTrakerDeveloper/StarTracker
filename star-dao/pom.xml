@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.star</groupId>
-  <artifactId>dao</artifactId>
+  <artifactId>star-dao</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>dao</name>
+  <name>star-dao</name>
   <url>http://maven.apache.org</url>
 
   <properties>
