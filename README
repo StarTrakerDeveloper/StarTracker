@@ -11,3 +11,4 @@ star-client 为Android客户端
 	4、输入 git clone git@github.com:StarTrakerDeveloper/StarTracker.git 提示输入你的github账户密码    
 	5、这样就把项目克隆下来了
 	6、在当前件夹下 双击 toeclipse.bat 和 cleancomplie.bat (这样用来把项目构建为maven项目)
+	7、测试
