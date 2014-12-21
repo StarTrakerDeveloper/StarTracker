@@ -5,12 +5,13 @@
 	<groupId>com.star</groupId>
 	<artifactId>star-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>apk</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<platform.version> 4.1.1.4
 		</platform.version>
-		<android.plugin.version>3.5.3</android.plugin.version>
+		<android.plugin.version>3.7.0</android.plugin.version>
 	</properties>
 
 	<dependencies>
@@ -22,14 +23,25 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<sourceDirectory>src</sourceDirectory>
+		<finalName>${project.artifactId}</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+					<artifactId>android-maven-plugin</artifactId>
+					<version>${android.plugin.version}</version>
+					<extensions>true</extensions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
 			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
+				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+				<artifactId>android-maven-plugin</artifactId>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<sdk>
+						<platform>16</platform>
+					</sdk>
 				</configuration>
 			</plugin>
 		</plugins>
