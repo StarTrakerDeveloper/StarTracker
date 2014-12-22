@@ -40,14 +40,12 @@ public class LogoActivity extends Activity {
 		
 		// 控制键盘打开
 		et_uname_c.setOnFocusChangeListener(new OnFocusChangeListener() {
-			@Override
 			public void onFocusChange(View arg0, boolean arg1) {
 				// TODO Auto-generated method stub
 				inputMethodManager.showSoftInput(et_uname_c,InputMethodManager.SHOW_FORCED);
 			}
 		});
 		et_pwd_c.setOnFocusChangeListener(new OnFocusChangeListener() {
-			@Override
 			public void onFocusChange(View arg0, boolean arg1) {
 				// TODO Auto-generated method stub
 				inputMethodManager.showSoftInput(et_pwd_c,InputMethodManager.SHOW_FORCED);
@@ -56,7 +54,6 @@ public class LogoActivity extends Activity {
 		btn_login = (Button) findViewById(R.id.btn_login_c);
 		btn_login.setOnClickListener(new OnClickListener() {
 			
-			@Override
 			public void onClick(View v) {
 				// 控制键盘关闭
 				inputMethodManager.hideSoftInputFromWindow(LogoActivity.this.getCurrentFocus().getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
