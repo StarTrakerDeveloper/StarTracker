@@ -11,8 +11,7 @@ import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.star.client.LogoActivity;
-import com.star.client.R;
+import com.star.R;
 
 /**
  * 主Activity 显示logo

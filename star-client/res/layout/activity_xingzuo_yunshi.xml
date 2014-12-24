@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*
+**	星语布局文件，星座运势及解读等
+*/-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:scrollbars="none">
+
+    <!-- 全局半透明遮罩层 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/setting_bg" >
+
+        <!-- 顶部标题及返回按钮 -->
+
+        <LinearLayout
+            android:id="@+id/ll_xingzuo_top"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_back_xingzuoyunshi_top"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/icon_back_n" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:text="@string/title_xingzuoyunshi"
+                android:textColor="@color/textView"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- 星座基本信息 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_xingzuo_base_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_xingzuo_top" >
+
+            <ImageView
+                android:id="@+id/iv_xingzuo_left_top"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="#345c6999"
+                android:contentDescription="@string/contentDescription"
+                android:padding="5dp"
+                android:src="@drawable/xingzuo_zise_tianxie" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/iv_xingzuo_left_top"
+                android:layout_toRightOf="@id/iv_xingzuo_left_top"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_xingzuo_name_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/title_xingzuoyunshi"
+                    android:textColor="@color/textViewSub"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_xingzuo_date_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/title_xingzuoyunshi"
+                    android:textColor="@color/textViewSub"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_xingzuo_change_right_top"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/icon_arrow" />
+        </RelativeLayout>
+
+        <!-- 分隔线 -->
+
+        <ImageView
+            android:id="@+id/iv_xingzuo_line_base_yunshi"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rl_xingzuo_base_top"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/textViewSub"
+            android:contentDescription="@string/contentDescription" />
+
+        <!-- 运势信息 -->
+
+        <LinearLayout
+            android:id="@+id/rl_xingzuo_yunshi_middle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_xingzuo_line_base_yunshi"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:baselineAligned="false"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <!-- 综合运势 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_xingzuo_yunshi_zonghe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_xingzuo_yunshi_zonghe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_xingzuo_yunshi_zonghe"
+                        android:textColor="@color/textViewSub"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_zonghe_1"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing1" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_zonghe_2"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing1" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_zonghe_3"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing1" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_zonghe_4"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing2" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_zonghe_5"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing2" />
+                </LinearLayout>
+
+                <!-- 爱情运势 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_xingzuo_yunshi_aiqing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_xingzuo_yunshi_aiqing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_xingzuo_yunshi_aiqing"
+                        android:textColor="@color/textViewSub"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_aiqing_1"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing1" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_aiqing_2"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing2" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_aiqing_3"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing2" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_aiqing_4"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing2" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_aiqing_5"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing2" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <!-- 工作状况 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_xingzuo_yunshi_gongzuo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_xingzuo_yunshi_gongzuo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_xingzuo_yunshi_gongzuo"
+                        android:textColor="@color/textViewSub"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_gongzuo_1"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing1" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_gongzuo_2"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing2" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_gongzuo_3"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing2" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_gongzuo_4"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing2" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_gongzuo_5"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing2" />
+                </LinearLayout>
+
+                <!-- 理财投资 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_xingzuo_yunshi_licai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_xingzuo_yunshi_licai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_xingzuo_yunshi_licai"
+                        android:textColor="@color/textViewSub"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_licai_1"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing1" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_licai_2"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing1" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_licai_3"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing1" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_licai_4"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing1" />
+
+                    <ImageView
+                        android:id="@+id/iv_xingzuo_yunshi_licai_5"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/icon_xingyun_xingxing2" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <!-- 健康指数 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_xingzuo_yunshi_jiankang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_xingzuo_yunshi_jiankang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_xingzuo_yunshi_jiankang"
+                        android:textColor="@color/textViewSub"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_xingzuo_yunshi_jiankang_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/text_xingzuo_yunshi_jiankang"
+                        android:textColor="@color/textView"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- 速配星座 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_xingzuo_yunshi_supei"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_xingzuo_yunshi_supei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_xingzuo_yunshi_supei"
+                        android:textColor="@color/textViewSub"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_xingzuo_yunshi_supei_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/text_xingzuo_yunshi_supei"
+                        android:textColor="@color/textView"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <!-- 幸运颜色 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_xingzuo_yunshi_yanse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_xingzuo_yunshi_yanse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_xingzuo_yunshi_yanse"
+                        android:textColor="@color/textViewSub"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_xingzuo_yunshi_yanse_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/text_xingzuo_yunshi_yanse"
+                        android:textColor="@color/textView"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- 幸运数字 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_xingzuo_yunshi_shuzi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_xingzuo_yunshi_shuzi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_xingzuo_yunshi_shuzi"
+                        android:textColor="@color/textViewSub"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_xingzuo_yunshi_shuzi_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/text_xingzuo_yunshi_shuzi"
+                        android:textColor="@color/textView"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_xingzuo_line_yunshi_xingyun"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rl_xingzuo_yunshi_middle"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/textViewSub"
+            android:contentDescription="@string/contentDescription" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_xingzuo_line_yunshi_xingyun"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:baselineAligned="false"
+            android:orientation="vertical" >
+
+            <!-- 星运解读 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/tv_xingzuo_jiedu_xingyun_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/icon_xingyun_jiedu1" />
+
+                <TextView
+                    android:id="@+id/tv_xingzuo_jiedu_xingyun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/text_xingzuo_jiedu_xingyun"
+                    android:textColor="@color/textView"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_xingzuo_jiedu_xingyun_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/text_xingzuo_jiedu_xingyun"
+                android:textColor="@color/textViewSub"
+                android:textSize="14sp" />
+
+            <!-- 爱情运 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/tv_xingzuo_jiedu_aiqing_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/icon_xingyun_aiqing1" />
+
+                <TextView
+                    android:id="@+id/tv_xingzuo_jiedu_aiqing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/text_xingzuo_jiedu_aiqing"
+                    android:textColor="@color/textView"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_xingzuo_jiedu_aiqing_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/text_xingzuo_jiedu_aiqing"
+                android:textColor="@color/textViewSub"
+                android:textSize="14sp" />
+
+            <!-- 事业运 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/tv_xingzuo_jiedu_gongzuo_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/icon_xingyun_gongzuo1" />
+
+                <TextView
+                    android:id="@+id/tv_xingzuo_jiedu_gongzuo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/text_xingzuo_jiedu_gongzuo"
+                    android:textColor="@color/textView"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_xingzuo_jiedu_gongzuo_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/text_xingzuo_jiedu_gongzuo"
+                android:textColor="@color/textViewSub"
+                android:textSize="14sp" />
+
+            <!-- 财运 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/tv_xingzuo_jiedu_licai_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/icon_xingyun_licai1" />
+
+                <TextView
+                    android:id="@+id/tv_xingzuo_jiedu_licai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/text_xingzuo_jiedu_licai"
+                    android:textColor="@color/textView"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_xingzuo_jiedu_licai_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/text_xingzuo_jiedu_licai"
+                android:textColor="@color/textViewSub"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.star.R;
+
 public class SettingsActivity extends Activity {
 
 	@Override

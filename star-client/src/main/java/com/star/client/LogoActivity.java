@@ -18,8 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.star.client.MainActivity;
-import com.star.client.R;
+import com.star.R;
 
 public class LogoActivity extends Activity {
 
@@ -31,7 +30,7 @@ public class LogoActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login);
+		setContentView(R.layout.activity_slipmenu);
 		inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 		et_uname_c = (EditText) findViewById(R.id.et_uname_c);
 		et_pwd_c = (EditText) findViewById(R.id.et_pwd_c);
