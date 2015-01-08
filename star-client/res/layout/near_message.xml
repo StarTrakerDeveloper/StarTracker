@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/profile_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/actionba_bg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/profile_back"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/profile_grzl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingRight="60dp"
+            android:text="Near the message"
+            android:textColor="#96ACD5"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/near_message"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+    </ListView>
+
+</LinearLayout>
