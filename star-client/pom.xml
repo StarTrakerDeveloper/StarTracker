@@ -14,13 +14,7 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-		<!-- Android 4.2.2 r3 系统 -->
-		  <groupId>android</groupId>
-		  <artifactId>android</artifactId>
-		  <version>${platform.version}</version>
-		  <scope>provided</scope>
-		</dependency>
+		
 
 		<!-- 项目依赖的包写到这 -->
 		<!-- http://mvnrepository.com/artifact/com.nineoldandroids/library/2.4.0 -->
