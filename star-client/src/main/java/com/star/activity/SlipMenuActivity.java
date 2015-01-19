@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
@@ -33,7 +32,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.star.R;
 import com.star.adapter.SettingListAdapter;
 import com.star.layout.view.DragLayout;
@@ -41,15 +39,17 @@ import com.star.layout.view.DragLayout.DragListener;
 import com.star.main.MainActivity;
 import com.star.model.Person;
 import com.star.utils.Util;
+
 /**
  * 侧滑菜单
- * @ClassName: LoginActivity.java 
+ * 
+ * @ClassName: LoginActivity.java
  * @Description: 预处理通讯录数据。可以兼容其他界面
  * @author Lee
- * @email lijunlong42@126.com  
+ * @email lijunlong42@126.com
  * @date 2014-12-24 上午11:49:44
  */
-public class SlipMenuActivity extends Activity {
+public class SlipMenuActivity extends BaseActivity {
 
 	private DragLayout dl;
 	private ListView lv;
@@ -124,7 +124,9 @@ public class SlipMenuActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				Util.t(getApplicationContext(), "将要跳转到设置页面");
+				//Util.t(getApplicationContext(), "将要跳转到设置页面");
+				Intent intent = new Intent(SlipMenuActivity.this, SettingActivity.class);
+				startActivity(intent);
 			}
 		});
 
@@ -135,8 +137,9 @@ public class SlipMenuActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// 控制键盘关闭
-				inputMethodManager.hideSoftInputFromWindow(SlipMenuActivity.this
-						.getCurrentFocus().getWindowToken(),
+				inputMethodManager.hideSoftInputFromWindow(
+						SlipMenuActivity.this.getCurrentFocus()
+								.getWindowToken(),
 						InputMethodManager.HIDE_NOT_ALWAYS);
 
 				// 判断用户名与密码是否为空
@@ -153,10 +156,11 @@ public class SlipMenuActivity extends Activity {
 				} else {
 					// 如果输入了用户名和密码则跳转到 主页面
 					// 在逻辑开发时，如果输入了用户名和密码，则进行验证，验证通过后跳转到星图页面
-					Intent intent = new Intent();
-					intent.setClass(SlipMenuActivity.this, MainActivity.class);
-					intent.putExtra("uname", et_uname_c.getText().toString());
-					intent.putExtra("pwd", et_pwd_c.getText().toString());
+					Intent intent = new Intent(SlipMenuActivity.this,
+							FillDetailsActivity.class);
+					
+//					intent.putExtra("uname", et_uname_c.getText().toString());
+//					intent.putExtra("pwd", et_pwd_c.getText().toString());
 					startActivity(intent);
 				}
 			}
@@ -291,14 +295,14 @@ public class SlipMenuActivity extends Activity {
 
 				// 得到联系人头像ID
 				Long photoid = phoneCursor.getLong(PHONES_PHOTO_ID_INDEX);
-				
+
 				Person person = new Person();
 				// 保存查询数据信息
 				person.setPhoneNum(phoneNumber);
 				person.setName(contactName);
 				person.setId(contactid);
 				person.setPinyin(getStringPinYin(contactName));
-				if(photoid > 0)
+				if (photoid > 0)
 					person.setPhotoId(photoid);
 				else
 					person.setPhotoId(-1L);

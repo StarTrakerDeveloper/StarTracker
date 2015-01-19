@@ -1,7 +1,7 @@
 package com.star.activity;
 
 import com.star.R;
-import com.star.activity.TempActivity;
+import com.star.TempActivity;
 import com.star.client.CircleImageView;
 import com.star.utils.LogUtil;
 

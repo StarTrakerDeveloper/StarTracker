@@ -35,7 +35,7 @@ import com.star.model.PinyinComparator;
  * @email lijunlong42@126.com  
  * @date 2014-12-24 上午11:47:30
  */
-public class AddressListActivity extends Activity implements OnClickListener,
+public class AddressListActivity extends BaseActivity implements OnClickListener,
 		OnItemClickListener {
 	// 顶部的返回按钮（图片）
 	private ImageView iv_back_top_left;

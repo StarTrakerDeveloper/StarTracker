@@ -17,7 +17,7 @@ import com.star.utils.PicUtils;
  * @email lijunlong42@126.com  
  * @date 2014-12-24 上午11:50:37
  */
-public class PersonDetailActivity extends Activity {
+public class PersonDetailActivity extends BaseActivity {
 	private Person person;
 	private ImageView person_head_iv;
 	private TextView person_name_tv;

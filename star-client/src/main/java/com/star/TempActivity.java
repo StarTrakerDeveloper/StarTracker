@@ -1,6 +1,9 @@
-package com.star.activity;
+package com.star;
 
 import com.star.R;
+import com.star.activity.BaseActivity;
+import com.star.activity.ChatActivity;
+import com.star.activity.NearMsgActivity;
 import com.star.utils.LogUtil;
 
 import android.content.Intent;

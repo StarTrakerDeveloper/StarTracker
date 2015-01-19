@@ -20,7 +20,7 @@ import com.star.R;
  * @email lijunlong42@126.com  
  * @date 2014-12-24 上午11:51:11
  */
-public class RadarActivity extends Activity {
+public class RadarActivity extends BaseActivity {
 
 	private ImageView iv_back_top_left;
 	private ImageView im_scan;
