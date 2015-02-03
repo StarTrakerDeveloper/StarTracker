@@ -28,7 +28,7 @@ import com.star.utils.Util;
  * @email lijunlong42@126.com  
  * @date 2014-12-24 上午11:48:43
  */
-public class BubbleActivity extends Activity implements OnClickListener {
+public class BubbleActivity extends BaseActivity implements OnClickListener {
 	// 顶部的返回按钮（图片）
 	private ImageView iv_back_top_left;
 	// 自定义的随机气泡布局页面

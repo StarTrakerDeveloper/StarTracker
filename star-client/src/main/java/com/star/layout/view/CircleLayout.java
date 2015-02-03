@@ -32,14 +32,7 @@ import android.view.ViewGroup;
 import com.star.R;
 
 
-/**
- * 
- * @author Szugyi
- * Creates a rotatable circle menu which can be parameterized by custom attributes.
- * Handles touches and gestures to make the menu rotatable, and to make the 
- * menu items selectable and clickable.
- * 
- */
+  
 public class CircleLayout extends ViewGroup {
 	// Event listeners
 	private OnItemClickListener mOnItemClickListener = null;

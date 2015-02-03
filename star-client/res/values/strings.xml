@@ -53,5 +53,11 @@
 	<string name="registered_1_textview1">欢迎加入 STARRY SKY</string>
 	<string name="registered_1_textview2">请完善您的个人信息</string>
 	<string name="registered_2_editText">请设置您的昵称</string>
+	
+	<!-- 填写个人资料需要的String -->
+	<string name="setmessage_1_welcome">Hi!</string>
+	<string name="setmessage_1_hint1">请添加您的照片以及选择您的头像</string>
+	
+    <string name="quanxian">请选择权限</string>
 
 </resources>

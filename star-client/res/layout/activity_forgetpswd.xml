@@ -4,125 +4,128 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     android:orientation="vertical" >
-    <LinearLayout 
-         android:layout_width="match_parent"
-   		 android:layout_height="@dimen/menu_layout_height"
-   		 android:layout_gravity="center"
-    	 android:orientation="horizontal"
-    	  >
-		<ImageView 
-		    android:id="@+id/forgetpswd_gobk" 
-		    android:src="@drawable/icon_back_p"
-		    android:layout_width="50dp"
-		    android:layout_height="match_parent"
-		    android:contentDescription="@string/contentDescription"
-		    android:scaleType="centerInside"
-		     />
-		<TextView
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:text="@string/menu_forgetpswd"
-		    android:gravity="center"
-		    android:textColor="@color/text_color"
-		    android:textSize="@dimen/menu_textSize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_layout_height"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/forgetpswd_gobk"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/contentDescription"
+            android:onClick="back"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_back_p" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/menu_forgetpswd"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/menu_textSize" />
     </LinearLayout>
 
-   <LinearLayout
-       		android:layout_marginTop="@dimen/editText_layout_margin"
-         android:layout_width="match_parent"
-   		 android:layout_height="40dp"
-    	 android:orientation="horizontal"
-    	 android:layout_marginLeft="@dimen/editText_layout_margin"
-    	 android:layout_marginRight="@dimen/editText_layout_margin"
-    	 android:background="@drawable/inputbox_n"
-    	  >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/editText_layout_margin"
+        android:layout_marginRight="@dimen/editText_layout_margin"
+        android:layout_marginTop="@dimen/editText_layout_margin"
+        android:background="@drawable/inputbox_n"
+        android:orientation="horizontal" >
 
         <ImageView
             android:layout_width="wrap_content"
-            android:contentDescription="@string/contentDescription"
-            android:src="@drawable/icon_lock" 
             android:layout_height="wrap_content"
-            android:scaleType="fitStart"/>
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="fitStart"
+            android:src="@drawable/icon_lock" />
+
         <EditText
             android:id="@+id/forget_oldpswd"
-             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:width="@dimen/editText_width"
+            android:layout_height="match_parent"
             android:height="@dimen/editText_height"
-            android:textColor="@color/text_color"
             android:hint="@string/editText_forgetpswd_oldpswd_hint"
-            android:inputType="phone" />
+            android:inputType="textPassword"
+            android:textColor="@color/text_color"
+            android:width="@dimen/editText_width" />
     </LinearLayout>
-    
-   <LinearLayout
-       		android:layout_marginTop="@dimen/editText_layout_margin"
-         android:layout_width="match_parent"
-   		 android:layout_height="40dp"
-    	 android:orientation="horizontal"
-    	 android:layout_marginLeft="@dimen/editText_layout_margin"
-    	 android:layout_marginRight="@dimen/editText_layout_margin"
-    	 android:background="@drawable/inputbox_n"
-    	  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/editText_layout_margin"
+        android:layout_marginRight="@dimen/editText_layout_margin"
+        android:layout_marginTop="@dimen/editText_layout_margin"
+        android:background="@drawable/inputbox_n"
+        android:orientation="horizontal" >
 
         <ImageView
             android:layout_width="wrap_content"
-            android:contentDescription="@string/contentDescription"
-            android:src="@drawable/icon_unlock" 
             android:layout_height="wrap_content"
-            android:scaleType="fitStart"/>
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="fitStart"
+            android:src="@drawable/icon_unlock" />
+
         <EditText
             android:id="@+id/forget_newpswd"
-             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:width="@dimen/editText_width"
+            android:layout_height="match_parent"
             android:height="@dimen/editText_height"
-            android:textColor="@color/text_color"
             android:hint="@string/editText_forgetpswd_newpswd_hint"
-            android:inputType="phone" />
+            android:inputType="textPassword"
+            android:textColor="@color/text_color"
+            android:width="@dimen/editText_width" />
     </LinearLayout>
-    
-   <LinearLayout
-       		android:layout_marginTop="@dimen/editText_layout_margin"
-         android:layout_width="match_parent"
-   		 android:layout_height="40dp"
-    	 android:orientation="horizontal"
-    	 android:layout_marginLeft="@dimen/editText_layout_margin"
-    	 android:layout_marginRight="@dimen/editText_layout_margin"
-    	 android:background="@drawable/inputbox_n"
-    	  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/editText_layout_margin"
+        android:layout_marginRight="@dimen/editText_layout_margin"
+        android:layout_marginTop="@dimen/editText_layout_margin"
+        android:background="@drawable/inputbox_n"
+        android:orientation="horizontal" >
 
         <ImageView
             android:layout_width="wrap_content"
-            android:contentDescription="@string/contentDescription"
-            android:src="@drawable/icon_unlock" 
             android:layout_height="wrap_content"
-            android:scaleType="fitStart"/>
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="fitStart"
+            android:src="@drawable/icon_unlock" />
+
         <EditText
-            android:id="@+id/forget_rnewpswd"
-             android:layout_height="match_parent"
+            android:id="@+id/forget_confirmpswd"
             android:layout_width="match_parent"
-            android:width="@dimen/editText_width"
+            android:layout_height="match_parent"
             android:height="@dimen/editText_height"
-            android:textColor="@color/text_color"
             android:hint="@string/editText_forgetpswd_rnewpswd_hint"
-            android:inputType="phone" />
+            android:inputType="textPassword"
+            android:textColor="@color/text_color"
+            android:width="@dimen/editText_width" />
     </LinearLayout>
-    
-    <LinearLayout 
-         android:layout_width="match_parent"
-   		 android:layout_height="50dp"
-   		 android:layout_marginTop="50dp"
-    	 android:orientation="horizontal"
-    	 android:layout_marginLeft="@dimen/editText_layout_margin"
-    	 android:layout_marginRight="@dimen/editText_layout_margin"
-    	
-    	  >
-		<Button android:text="@string/btn_login"
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		     android:background="@drawable/btn_n"
-		     android:textColor="@color/btn_unpress_color"
-		     />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/editText_layout_margin"
+        android:layout_marginRight="@dimen/editText_layout_margin"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/forget_commit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_n"
+            android:onClick="commit"
+            android:text="确定"
+            android:textColor="@color/btn_unpress_color" />
     </LinearLayout>
 
 </LinearLayout>

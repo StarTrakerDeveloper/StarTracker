@@ -11,7 +11,7 @@
         android:layout_weight="0.2"
         android:orientation="horizontal" >
 
-        <com.itandroid.starbaby.CircleImageView
+        <com.star.layout.view.CircleForImageView
             android:id="@+id/touxiang"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -260,7 +260,9 @@
         android:layout_height="10dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_weight="1" >
+        android:layout_weight="1"
+        android:id="@+id/search_layout" 
+        android:onClick="search">
 
         <ImageView
             android:id="@+id/find_other_search"

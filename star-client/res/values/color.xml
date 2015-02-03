@@ -20,11 +20,19 @@
     <color name="textView">#91C7FE</color>
     <color name="textViewSub">#283767</color>
     
-    <color name="text_color">#FFFFFF</color>
+    <color name="text_color">#5592da</color>
     <color name="divider_color">#e0000000</color>
     <color name="msg_color">#FFFFFFFF</color>
     <color name="dialog_bg">#283767</color>
 
     <color name="btn_press_color">#91C7FE</color>
     <color name="btn_unpress_color">#81b7eE</color>
+    
+    <!-- 设置输入框默认子的字体颜色 -->
+    <color name="hint_text_color">#5592da</color>
+    
+    <!-- 设置按钮上面字体的颜色 -->
+    
+    <color name="btn_text_size">#69b4ff</color>
+    
 </resources>

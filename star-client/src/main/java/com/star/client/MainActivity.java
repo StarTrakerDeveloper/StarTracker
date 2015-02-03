@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.star.R;
+import com.star.activity.BaseActivity;
 
 /**
  * 主Activity 显示logo
@@ -19,7 +20,7 @@ import com.star.R;
  * @author wx
  *
  */
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 
 	private ImageView im_logo_c = null;
 

@@ -15,7 +15,6 @@
    limitations under the License.
 -->
 <resources>
-
     <declare-styleable name="Circle">
         <attr name="circleBackground" format="integer" />
         <attr name="firstChildPosition">
@@ -29,6 +28,10 @@
     </declare-styleable>
     <declare-styleable name="CircleImageView">
         <attr name="name" format="string" />
+    </declare-styleable>
+    <declare-styleable name="CircleForImageView">
+        <attr name="border_width" format="dimension" />
+         <attr name="border_color" format="dimension" />
     </declare-styleable>
     
     <!-- DiaLog集合Start -->

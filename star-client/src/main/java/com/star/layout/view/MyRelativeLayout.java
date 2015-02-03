@@ -15,6 +15,7 @@ import com.star.layout.view.DragLayout.Status;
  * @email lijunlong42@126.com  
  * @date 2014-12-24 上午11:56:57
  */
+
 public class MyRelativeLayout extends RelativeLayout {
     private DragLayout dl;
 

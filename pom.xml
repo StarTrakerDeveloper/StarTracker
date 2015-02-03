@@ -15,7 +15,6 @@
 	</properties>
 
 	<modules>
-		<module>star-client</module>
 		<module>star-common</module>
 		<module>star-service</module>
 		<module>star-web</module>

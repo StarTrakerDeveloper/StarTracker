@@ -5,19 +5,22 @@
     android:background="@drawable/bg"
     android:orientation="vertical" >
 
-    <com.star.client.CircleImageView
+    <com.star.layout.view.CircleForImageView
         android:id="@+id/timeline_touxiang"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
-        android:layout_marginTop="60px"
+        android:layout_marginTop="50dp"
+        android:onClick="writeTalk"
         android:src="@drawable/kn" />
 
     <ListView
-        android:layout_marginTop="45px"
         android:id="@+id/timeline_listtview"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="fill_parent"
+        android:layout_marginTop="30dp"
+        android:divider="@color/white"
+        android:listSelector="#00000000" >
     </ListView>
 
 </LinearLayout>

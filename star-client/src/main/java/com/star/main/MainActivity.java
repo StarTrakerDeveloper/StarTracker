@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.star.R;
 import com.star.activity.AddressListActivity;
+import com.star.activity.LoginActivity;
 import com.star.activity.SlipMenuActivity;
 
 /**
@@ -52,7 +53,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
-				intent.setClass(MainActivity.this, SlipMenuActivity.class);
+				intent.setClass(MainActivity.this, LoginActivity.class);
 				startActivity(intent);
 			}
 		});

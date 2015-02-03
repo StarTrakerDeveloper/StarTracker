@@ -19,102 +19,98 @@
             android:src="@drawable/logo" />
     </LinearLayout>
 
-    <LinearLayout 
-         android:layout_width="match_parent"
-   		 android:layout_height="50dp"
-    	 android:orientation="horizontal"
-    	 android:layout_marginLeft="@dimen/editText_layout_margin"
-    	 android:layout_marginRight="@dimen/editText_layout_margin"
-    	 android:background="@drawable/inputbox_n"
-    	  >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/editText_layout_margin"
+        android:layout_marginRight="@dimen/editText_layout_margin"
+        android:background="@drawable/inputbox_n"
+        android:orientation="horizontal" >
 
         <ImageView
             android:layout_width="wrap_content"
-            android:contentDescription="@string/contentDescription"
-            android:src="@drawable/icon_phone" 
             android:layout_height="wrap_content"
-            android:scaleType="fitStart"/>
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="fitStart"
+            android:src="@drawable/icon_phone" />
 
         <EditText
             android:id="@+id/login_phone"
-             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:width="100dp"
-            android:height="30dp"
-            android:textColor="@color/text_color"
+            android:layout_height="match_parent"
             android:hint="@string/editText_login_phone_hint"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:textColor="@color/text_color" />
     </LinearLayout>
-	<LinearLayout 
-         android:layout_width="match_parent"
-   		 android:layout_height="50dp"
-   		 android:layout_marginTop="@dimen/editText_layout_margin"
-    	 android:orientation="horizontal"
-    	 android:layout_marginLeft="@dimen/editText_layout_margin"
-    	 android:layout_marginRight="@dimen/editText_layout_margin"
-    	 android:background="@drawable/inputbox_n"
-    	  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/editText_layout_margin"
+        android:layout_marginRight="@dimen/editText_layout_margin"
+        android:layout_marginTop="@dimen/editText_layout_margin"
+        android:background="@drawable/inputbox_n"
+        android:orientation="horizontal" >
 
         <ImageView
             android:layout_width="wrap_content"
-            android:contentDescription="@string/contentDescription"
-            android:src="@drawable/icon_lock" 
             android:layout_height="wrap_content"
-            android:scaleType="fitStart"/>
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="fitStart"
+            android:src="@drawable/icon_lock" />
 
         <EditText
             android:id="@+id/login_pswd"
-            android:textColor="@color/text_color"
-             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:width="100dp"
-            android:height="30dp"
+            android:layout_height="match_parent"
             android:hint="@string/editText_login_pswd_hint"
-            android:inputType="textWebPassword" />
+            android:inputType="textPassword"
+            android:textColor="@color/text_color" />
     </LinearLayout>
-    <LinearLayout 
-         android:layout_width="match_parent"
-   		 android:layout_height="50dp"
-   		 android:layout_marginTop="50dp"
-    	 android:orientation="horizontal"
-    	 android:layout_marginLeft="@dimen/editText_layout_margin"
-    	 android:layout_marginRight="@dimen/editText_layout_margin"
-    	
-    	  >
-		<Button android:text="@string/btn_login"
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		     android:background="@drawable/btn_n"
-		     android:textColor="@color/btn_unpress_color"
-		     />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/editText_layout_margin"
+        android:layout_marginRight="@dimen/editText_layout_margin"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/login_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_n"
+            android:text="@string/btn_login"
+            android:textColor="@color/btn_unpress_color" />
     </LinearLayout>
     <!-- 忘记密码、注册新用户 -->
-     <LinearLayout 
-         android:layout_width="match_parent"
-   		 android:layout_height="50dp"
-   		 android:layout_marginTop="30dp"
-    	 android:orientation="horizontal"
-    	 android:paddingLeft="20dp"
-    	 android:layout_marginLeft="@dimen/editText_layout_margin"
-    	 android:layout_marginRight="@dimen/editText_layout_margin"
-    	
-    	  >
 
-		<EditText
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:autoLink="web"
-		    android:inputType="textMultiLine"
-		    android:textColor="@color/text_color"
-		    android:text="@string/login_link_forgetpswd" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/editText_layout_margin"
+        android:layout_marginRight="@dimen/editText_layout_margin"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp" >
 
-		<EditText
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"  
-		    android:textColor="@color/text_color"
-		    android:autoLink="web"
-		    android:inputType="textMultiLine"
-		    android:text="@string/login_link_registered" />
+        <Button
+            android:id="@+id/login_forgetpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:text="@string/login_link_forgetpswd"
+            android:textColor="@color/text_color" />
+
+        <Button
+            android:id="@+id/login_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:background="#00000000"
+            android:text="@string/login_link_registered"
+            android:textColor="@color/text_color" />
     </LinearLayout>
-    
+
 </LinearLayout>

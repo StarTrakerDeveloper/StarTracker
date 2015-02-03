@@ -5,35 +5,19 @@
     android:background="@drawable/bg"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:id="@+id/profile_actionbar"
+    <include
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@drawable/actionba_bg"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/profile_back"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/back" />
-
-        <TextView
-            android:id="@+id/profile_grzl"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:paddingRight="60dp"
-            android:text="Near the message"
-            android:textColor="#96ACD5"
-            android:textSize="20sp" />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        layout="@layout/title_actionbar" />
 
     <ListView
-        android:id="@+id/near_message"
+        android:id="@+id/near_msg_listview"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="25dp"
+        android:divider="@color/white"
+        android:listSelector="#00000000" >
     </ListView>
 
 </LinearLayout>

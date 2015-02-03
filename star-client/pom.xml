@@ -9,18 +9,12 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<platform.version> 4.1.1.4
-		</platform.version>
+		<platform.version>4.2.2_r3</platform.version>
 		<android.plugin.version>3.8.2</android.plugin.version>
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.google.android</groupId>
-			<artifactId>android</artifactId>
-			<version>${platform.version}</version>
-			<scope>provided</scope>
-		</dependency>
+		
 
 		<!-- 项目依赖的包写到这 -->
 		<!-- http://mvnrepository.com/artifact/com.nineoldandroids/library/2.4.0 -->
@@ -34,6 +28,13 @@
 			<groupId>com.star</groupId>
 			<artifactId>android-support-v4</artifactId>
 			<version>v4</version>
+		</dependency>
+		
+		<!-- 策划菜单依赖包 -->
+		<dependency>
+			<groupId>com.star</groupId>
+			<artifactId>swipemenulistview</artifactId>
+			<version>1.0</version>
 		</dependency>
 		
 		<dependency>
@@ -61,7 +62,7 @@
 				<artifactId>android-maven-plugin</artifactId>
 				<configuration>
 					<sdk>
-						<platform>16</platform>
+						<platform>17</platform>
 					</sdk>
 				</configuration>
 			</plugin>

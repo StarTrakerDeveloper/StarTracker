@@ -3,8 +3,6 @@ package com.star.utils;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-import com.star.R;
-
 import android.content.ContentUris;
 import android.content.Context;
 import android.graphics.Bitmap;
