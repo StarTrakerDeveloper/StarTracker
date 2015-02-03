@@ -33,5 +33,25 @@
     <string name="contentDescription">pic</string>
     <string name="title_activity_xingzuo_yunshi">XingzuoYunshiActivity</string>
     <string name="title_activity_radar">RadarActivity</string>
+    
+    <string name="editText_login_phone_hint">请输入您的手机号码</string>
+	<string name="editText_login_pswd_hint">请输入您的登录密码</string>
+	<string name="btn_login">登录</string>
+	<string name="login_link_forgetpswd">忘记密码？</string>
+	<string name="login_link_registered">注册新用户？</string>
+	
+	<string name="menu_forgetpswd">忘记密码</string>
+	<string name="editText_forgetpswd_oldpswd_hint">请输入原密码</string>
+	<string name="editText_forgetpswd_newpswd_hint">请输入新密码</string>
+	<string name="editText_forgetpswd_rnewpswd_hint">请确认新密码</string>
+	
+	<string name="menu_registered">注册新用户</string>
+	<string name="editText_registered_phone">请输入您的手机号码</string>
+	<string name="editText_registered_pswd">请设置您的登录密码</string>
+	<string name="editText_registered_rpswd">请确认您的登录密码</string>
+	<string name="btn_registered">注册</string>
+	<string name="registered_1_textview1">欢迎加入 STARRY SKY</string>
+	<string name="registered_1_textview2">请完善您的个人信息</string>
+	<string name="registered_2_editText">请设置您的昵称</string>
 
 </resources>
