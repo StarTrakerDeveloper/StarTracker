@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 /**
  * 
  * @Description: 总设置
@@ -26,9 +27,8 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 
 	private Button back;
 	private TextView title;
-	private LinearLayout zhanghao, xxtz, huancun, fuzhu, about;
+	private LinearLayout zhanghao, xxtz, huancun, fuzhu, about, xgmm;
 	private CircleForImageView touxiang;
-	private GestureDetector gestureDetector;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,48 +43,20 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 		huancun.setOnClickListener(this);
 		fuzhu.setOnClickListener(this);
 		about.setOnClickListener(this);
-		//手势滑动跳转
-		gestureDetector = new GestureDetector(SettingActivity.this,
-				new SimpleOnGestureListener() {
-					@Override
-					public boolean onFling(MotionEvent e1, MotionEvent e2,
-							float velocityX, float velocityY) {
-						System.out.println("----------------滑动---------------");
-						// TODO Auto-generated method stub
-						final int FLING_MIN_DISTANCE = 60, FLING_MIN_VELOCITY = 120;
-						if (e1.getX() - e2.getX() > FLING_MIN_DISTANCE
-								&& Math.abs(velocityX) > FLING_MIN_VELOCITY) {
-							// Fling left
-							LogUtil.i("MyGesture", "Fling left");
-							Intent intent = new Intent(SettingActivity.this,
-									ZhangHaoSettingActivity.class);
-							startActivity(intent);
-						} else if (e2.getX() - e1.getX() > FLING_MIN_DISTANCE
-								&& Math.abs(velocityX) > FLING_MIN_VELOCITY) {
-							// Fling right
-							LogUtil.i("MyGesture", "Fling right");
-
-						}
-						return true;
-					}
-				});
+		xgmm.setOnClickListener(this);
 	}
 
 	void initView() {
 		back = (Button) this.findViewById(R.id.back);
 		title = (TextView) this.findViewById(R.id.title);
 		zhanghao = (LinearLayout) this.findViewById(R.id.setting_zhanghao);
-		touxiang = (CircleForImageView) this.findViewById(R.id.setting_touxiang);
+		touxiang = (CircleForImageView) this
+				.findViewById(R.id.setting_touxiang);
 		xxtz = (LinearLayout) this.findViewById(R.id.xxtz);
 		huancun = (LinearLayout) this.findViewById(R.id.huancun);
 		fuzhu = (LinearLayout) this.findViewById(R.id.fuzhu);
 		about = (LinearLayout) this.findViewById(R.id.about);
-	}
-
-	@Override
-	public boolean onTouchEvent(MotionEvent event) {
-		// TODO Auto-generated method stub
-		return gestureDetector.onTouchEvent(event);
+		xgmm = (LinearLayout) this.findViewById(R.id.xgmm);
 	}
 
 	@Override
@@ -114,6 +86,10 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 			break;
 		case R.id.about:
 			Toast.makeText(this, "关于", 0).show();
+			break;
+		case R.id.xgmm:
+			Intent changeIntent = new Intent(this, ChangePasswordActivity.class);
+			startActivity(changeIntent);
 			break;
 
 		}

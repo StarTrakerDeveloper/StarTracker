@@ -3,7 +3,7 @@
     android:id="@+id/profile_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/tsbg"
     android:orientation="vertical"
     tools:context="${relativePackage}.${activityClass}" >
 
@@ -55,28 +55,28 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:src="@drawable/btn_addsome_p" />
+            android:src="@drawable/icon_add_p" />
 
         <com.star.layout.view.CircleForImageView
             android:id="@+id/profile_image2"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:src="@drawable/btn_addsome_p" />
+            android:src="@drawable/icon_add_p" />
 
         <com.star.layout.view.CircleForImageView
             android:id="@+id/profile_image3"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:src="@drawable/btn_addsome_p" />
+            android:src="@drawable/icon_add_p" />
 
         <com.star.layout.view.CircleForImageView
             android:id="@+id/profile_addimage"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:src="@drawable/btn_addsome_p" />
+            android:src="@drawable/icon_add_p" />
     </LinearLayout>
 
     <TextView
@@ -92,46 +92,46 @@
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp" >
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp" >
 
         <EditText
             android:id="@+id/profile_language"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/btn_n"
+            android:layout_height="45dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/inputbox_n"
             android:gravity="center"
-            android:hint="请写下你的星语"
+            android:hint="星  语"
             android:textColorHint="#669dd7" />
 
         <EditText
             android:id="@+id/profile_age"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/btn_n"
+            android:layout_height="45dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/inputbox_n"
             android:gravity="center"
-            android:hint="请写下你的年龄"
+            android:hint="年  龄"
             android:numeric="integer"
             android:textColorHint="#669dd7" />
 
         <EditText
             android:id="@+id/profile_city"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/btn_n"
+            android:layout_height="45dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/inputbox_n"
             android:gravity="center"
-            android:hint="请写下你的城市"
+            android:hint="城  市"
             android:textColorHint="#669dd7" />
 
         <LinearLayout
             android:id="@+id/profile_voince_lay"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/btn_n"
+            android:layout_height="45dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/inputbox_n"
             android:gravity="center" >
 
             <Button

@@ -16,8 +16,7 @@
         android:id="@+id/xingzuozhuanpan"
         android:layout_width="400dip"
         android:layout_height="400dip"
-        android:layout_below="@id/social_starfriend_actionbar"
-        android:background="@drawable/onbg" >
+        android:layout_below="@id/social_starfriend_actionbar" >
 
         <com.star.layout.view.CircleLayout
             android:id="@+id/main_circle_layout"

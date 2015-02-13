@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class SearchActivity extends BaseActivity {
 	private CircleForImageView touxiang;
 	private FrameLayout searchLayout;
-	private GestureDetector gestureDetector;
+//	private GestureDetector gestureDetector;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,42 +23,44 @@ public class SearchActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.find_other_stafriend);
 		initView();
-		gestureDetector = new GestureDetector(SearchActivity.this,
-				new SimpleOnGestureListener() {
-					@Override
-					public boolean onFling(MotionEvent e1, MotionEvent e2,
-							float velocityX, float velocityY) {
-						System.out.println("----------------滑动---------------");
-						// TODO Auto-generated method stub
-						final int FLING_MIN_DISTANCE = 60, FLING_MIN_VELOCITY = 120;
-						if (e1.getX() - e2.getX() > FLING_MIN_DISTANCE
-								&& Math.abs(velocityX) > FLING_MIN_VELOCITY) {
-							// Fling left
-							LogUtil.i("MyGesture", "Fling left");
-							Intent intent = new Intent(SearchActivity.this,
-									SocialStarFriendActivity.class);
-							startActivity(intent);
-
-						} else if (e2.getX() - e1.getX() > FLING_MIN_DISTANCE
-								&& Math.abs(velocityX) > FLING_MIN_VELOCITY) {
-							// Fling right
-							LogUtil.i("MyGesture", "Fling right");
-
-						}
-						return true;
-					}
-				});
+//		gestureDetector = new GestureDetector(SearchActivity.this,
+//				new SimpleOnGestureListener() {
+//					@Override
+//					public boolean onFling(MotionEvent e1, MotionEvent e2,
+//							float velocityX, float velocityY) {
+//						System.out.println("----------------滑动---------------");
+//						// TODO Auto-generated method stub
+//						final int FLING_MIN_DISTANCE = 60, FLING_MIN_VELOCITY = 120;
+//						if (e1.getX() - e2.getX() > FLING_MIN_DISTANCE
+//								&& Math.abs(velocityX) > FLING_MIN_VELOCITY) {
+//							// Fling left
+//							LogUtil.i("MyGesture", "Fling left");
+//							Intent intent = new Intent(SearchActivity.this,
+//									SocialStarFriendActivity.class);
+//							startActivity(intent);
+//
+//						} else if (e2.getX() - e1.getX() > FLING_MIN_DISTANCE
+//								&& Math.abs(velocityX) > FLING_MIN_VELOCITY) {
+//							// Fling right
+//							LogUtil.i("MyGesture", "Fling right");
+//
+//						}
+//						return true;
+//					}
+//				});
 	}
 
 	public void search(View view) {
-		Toast.makeText(this, "搜索", 1).show();
+		// Toast.makeText(this, "搜索", 1).show();
+		Intent intent = new Intent(this, SearchResultActivity.class);
+		startActivity(intent);
 	}
 
-	@Override
-	public boolean onTouchEvent(MotionEvent event) {
-		// TODO Auto-generated method stub
-		return gestureDetector.onTouchEvent(event);
-	}
+	// @Override
+	// public boolean onTouchEvent(MotionEvent event) {
+	// // TODO Auto-generated method stub
+	// return gestureDetector.onTouchEvent(event);
+	// }
 
 	private void initView() {
 		touxiang = (CircleForImageView) this.findViewById(R.id.touxiang);

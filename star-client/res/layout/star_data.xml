@@ -43,7 +43,6 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/actionba_bg"
             android:orientation="horizontal" >
 
             <com.star.layout.view.CircleForImageView

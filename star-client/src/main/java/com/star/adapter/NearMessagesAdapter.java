@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.star.R;
 import com.star.activity.PersonalRecordsActivity;
+import com.star.activity.StarDataActivity;
 import com.star.model.NearMessage;
 import com.star.utils.LogUtil;
 import com.star.utils.MyApplication;
@@ -89,6 +90,16 @@ public class NearMessagesAdapter extends BaseAdapter {
 			viewHolder = (ViewHolder) view.getTag();
 		}
 		viewHolder.touxiang.setImageDrawable(nearMsg.getTouxiang());
+		viewHolder.touxiang.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				LogUtil.i("tttttttt", "空间动态，点击了头像");
+				Intent intent = new Intent(context, StarDataActivity.class);
+				context.startActivity(intent);
+			}
+		});
 		viewHolder.name.setText(nearMsg.getName());
 		if (nearMsg.getSex() == 0) {
 			viewHolder.sex.setImageDrawable(context.getResources().getDrawable(
