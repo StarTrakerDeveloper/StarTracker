@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*
+**	常量文字信息，方便后期做中英文或其他文字内容调整
+*/-->
+<resources>
+
+    <string name="app_name">StarTracker</string>
+    <string name="hello_world">Find Your Own Star！</string>
+    <string name="action_settings">设置</string>
+    <string name="title_tongxunlu">通讯录</string>
+    <string name="title_liuyanban">留言</string>
+    <string name="title_xingzuoyunshi">星座运势</string>
+    <string name="title_search">搜索</string>
+    <string name="tip_drop_refresh">下拉后刷新</string>
+    <string name="hint_login_username">请输入用户名</string>
+    <string name="hint_login_password">请输入登录密码</string>
+    <string name="hint_search_search">搜索</string>
+    <string name="text_xingzuo_yunshi_zonghe">综合运势</string>
+    <string name="text_xingzuo_yunshi_aiqing">爱情运势</string>
+    <string name="text_xingzuo_yunshi_gongzuo">工作状况</string>
+    <string name="text_xingzuo_yunshi_licai">理财投资</string>
+    <string name="text_xingzuo_yunshi_jiankang">健康指数</string>
+    <string name="text_xingzuo_yunshi_supei">速配星座</string>
+    <string name="text_xingzuo_yunshi_yanse">幸运颜色</string>
+    <string name="text_xingzuo_yunshi_shuzi">幸运数字</string>
+    <string name="text_xingzuo_jiedu_xingyun">星运解读</string>
+    <string name="text_xingzuo_jiedu_aiqing">爱情运</string>
+    <string name="text_xingzuo_jiedu_gongzuo">事业运</string>
+    <string name="text_xingzuo_jiedu_licai">财运</string>
+    <string name="logo">logo</string>
+    <string name="btn_ok">确定</string>
+    <string name="tip_white_space">Star</string>
+    <string name="contentDescription">pic</string>
+    <string name="title_activity_xingzuo_yunshi">XingzuoYunshiActivity</string>
+    <string name="title_activity_radar">RadarActivity</string>
+    
+    <string name="editText_login_phone_hint">请输入您的手机号码</string>
+	<string name="editText_login_pswd_hint">请输入您的登录密码</string>
+	<string name="btn_login">登录</string>
+	<string name="login_link_forgetpswd">忘记密码？</string>
+	<string name="login_link_registered">注册新用户？</string>
+	
+	<string name="menu_forgetpswd">忘记密码</string>
+	<string name="editText_forgetpswd_oldpswd_hint">请输入原密码</string>
+	<string name="editText_forgetpswd_newpswd_hint">请输入新密码</string>
+	<string name="editText_forgetpswd_rnewpswd_hint">请确认新密码</string>
+	
+	<string name="menu_registered">注册新用户</string>
+	<string name="editText_registered_phone">请输入您的手机号码</string>
+	<string name="editText_registered_pswd">请设置您的登录密码</string>
+	<string name="editText_registered_rpswd">请确认您的登录密码</string>
+	<string name="btn_registered">注册</string>
+	<string name="registered_1_textview1">欢迎加入 STARRY SKY</string>
+	<string name="registered_1_textview2">请完善您的个人信息</string>
+	<string name="registered_2_editText">请设置您的昵称</string>
+	
+	<!-- 填写个人资料需要的String -->
+	<string name="setmessage_1_welcome">Hi!</string>
+	<string name="setmessage_1_hint1">请添加您的照片以及选择您的头像</string>
+	
+    <string name="quanxian">请选择权限</string>
+
+</resources>

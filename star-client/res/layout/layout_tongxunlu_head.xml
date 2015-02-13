@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/*
+**	通讯录列表顶部提示信息布局文件，下拉时显示
+**		动画有卡顿需完善
+*/-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/head_contentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@color/textView"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/writer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="30dp"
+            android:text="@string/tip_drop_refresh"
+            android:textColor="@color/textViewSub"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+
+</LinearLayout>

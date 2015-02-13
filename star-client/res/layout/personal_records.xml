@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/personal_records_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/actionba_bg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/personal_records_back"
+            android:layout_width="30dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/back" />
+
+        <com.star.layout.view.CircleForImageView
+            android:id="@+id/personal_records_touxiang"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/kn" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/personal_records_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jhon.Ritina"
+                    android:textColor="#AFBBEA"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/personal_records_sexImg"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/nv" />
+
+                <ImageView
+                    android:id="@+id/personal_records_xingzuoImg"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_baiyang_p" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/personal_records_signature"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="When amazing night"
+                android:textColor="#4873A8"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageSwitcher
+        android:id="@+id/personale_records_imgSwitcher"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/testanother" />
+
+    <TextView
+        android:id="@+id/personale_records_mainMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="When we are young,please free to ie."
+        android:textColor="#365F93"
+        android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/personal_records_discusses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_weight="5"
+        android:divider="@color/white"
+        android:listSelector="#00000000" >
+    </ListView>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/message_send_bar" />
+
+</LinearLayout>

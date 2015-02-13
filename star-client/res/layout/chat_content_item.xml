@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:id="@+id/left_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="45dp"
+        android:gravity="left"
+        android:orientation="horizontal" >
+
+        <com.star.layout.view.CircleForImageView
+            android:id="@+id/image_left"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/kn" />
+
+        <TextView
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/left_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/talk_r"
+            android:text="left"
+            android:textColor="#69b4ff" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="5dp"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/right_msg"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/talk_l"
+            android:text="right"
+            android:textColor="#69b4ff" >
+        </TextView>
+
+        <com.star.layout.view.CircleForImageView
+            android:id="@+id/image_right"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/kn" />
+    </LinearLayout>
+
+</LinearLayout>
