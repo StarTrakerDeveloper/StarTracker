@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:id="@+id/profile_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/actionba_bg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/profile_back"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/profile_grzl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Please fill your details"
+            android:textColor="#96ACD5"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/profile_save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:paddingRight="10dp"
+            android:text="保存"
+            android:textColor="#4576B1"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_imageGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="50px"
+        android:paddingRight="50px" >
+
+        <com.star.client.CircleImageView
+            android:id="@+id/profile_image1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/test" />
+
+        <com.star.client.CircleImageView
+            android:id="@+id/profile_image2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/test" />
+
+        <com.star.client.CircleImageView
+            android:id="@+id/profile_image3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/test" />
+
+        <com.star.client.CircleImageView
+            android:id="@+id/profile_addimage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_addsome_p" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="Click Change images ,a total of eight"
+        android:textColor="#568dca" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp" >
+
+        <EditText
+            android:id="@+id/profile_language"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_n"
+            android:gravity="center"
+            android:hint="请写下你的星语"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColorHint="#669dd7" />
+
+        <EditText
+            android:id="@+id/profile_age"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_n"
+            android:gravity="center"
+            android:hint="请写下你的年龄"
+            android:numeric="integer"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColorHint="#669dd7" />
+
+        <EditText
+            android:id="@+id/profile_city"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_n"
+            android:gravity="center"
+            android:hint="请写下你的城市"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColorHint="#669dd7" />
+
+        <LinearLayout
+            android:id="@+id/profile_voince_lay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_n"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <Button
+                android:id="@+id/profile_voince"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/icon_sounds" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
